@@ -95,12 +95,12 @@ console.log("EXERCISE 5:\n==========\n");
 function dataUsage(planLimit, day, usage){
   let length = 30;
   let average = usage / day;
-  let exceedingUsage = planLimit / average;
-  let remainingUsage = (planLimit - usage) / (length - day)
+  let exceedingUsage = (usage * 2) - planLimit;
+  let remainingUsage = (planLimit - usage) / (length - day);
   console.log(`${day} days used, ${length - day} day's remaining`);
-  console.log(`Average daily use : ${usage / length} GB/day`);
+  console.log(`Average daily use : ${planLimit / length} GB/day`);
   console.log(`You are EXCEEDING your average daily use by (${average} GB/day),continuing this high usage,you'll exceed your data plan by ${exceedingUsage} GB.`)
   console.log(`To stay below your data plan limit, use no more then ${remainingUsage} GB/day.`)
 }
-dataUsage(50,23,40)
-dataUsage(100,23,20)
+// dataUsage(50,23,40)
+dataUsage(100,15,56)
