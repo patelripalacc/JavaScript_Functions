@@ -27,9 +27,9 @@ console.log("EXERCISE 2:\n==========\n");
 function checkAge(userName,age){
   let aboveSixteen = `Congrats ${userName}, you can drive!`;
   let belowSixteen = `Sorry ${userName}, but you need to wait until you're 16.`
- if (age<16){
+ if (age<16 || age == undefined){
   console.log(belowSixteen);
- }else {
+ } else {
   console.log(aboveSixteen);
  }
 }
@@ -37,7 +37,7 @@ function checkAge(userName,age){
 checkAge("Ripal",35)
 checkAge("Krisha",3)
 checkAge("Kripa",38)
-checkAge("Trisha",9)
+checkAge("Trisha")
 
 // Exercise 3 Section
 console.log("EXERCISE 3:\n==========\n");
@@ -45,17 +45,17 @@ console.log("EXERCISE 3:\n==========\n");
 function box(x, y){
   if (x > 0 && y > 0){
     return "1";
-  }else if (x > 0 && y < 0){
+  } else if (x > 0 && y < 0){
     return "2";
-  }else if (x < 0 && y < 0){
+  } else if (x < 0 && y < 0){
     return "3";
   } else if (x < 0 && y > 0){
     return "4";
-  }else if (x == 0 && y != 0){
+  } else if (x == 0 && y != 0){
     return "x"; 
-  }else if (x != 0 && y == 0){
+  } else if (x != 0 && y == 0){
     return "y";
-  }else{
+  } else{
     return "original";
   }
 } 
@@ -79,7 +79,7 @@ function triangle(a, b , c){
   return "isosceles triangle";
 } else if (a!=b && b!=c){
   return "scalene triangle";
-}else{
+} else{
   return "invalid triangle"
 }
 }
@@ -99,8 +99,8 @@ function dataUsage(planLimit, day, usage){
   let remainingUsage = (planLimit - usage) / (length - day)
   console.log(`${day} days used, ${length - day} day's remaining`);
   console.log(`Average daily use : ${usage / length} GB/day`);
-  console.log(`You are EXCEEDING your average daily use (${average} GB/day),continuing this high usage,you'll exceed your data plan by ${exceedingUsage} GB.`)
-  console.log(`To stay below your data plan limit, use no more then ${remainingUsage}`)
+  console.log(`You are EXCEEDING your average daily use by (${average} GB/day),continuing this high usage,you'll exceed your data plan by ${exceedingUsage} GB.`)
+  console.log(`To stay below your data plan limit, use no more then ${remainingUsage} GB/day.`)
 }
 dataUsage(50,23,40)
 dataUsage(100,23,20)
