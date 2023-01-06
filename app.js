@@ -4,11 +4,10 @@ console.log("Hello World!\n==========\n");
 console.log("EXERCISE 1:\n==========\n");
 
 function printOdds(count){
-    if(count > 1){
+    if(count > 0){
       for(let i = 0; i <= count; i++){
         if( i % 2 != 0) {
             console.log(i);
-        
         }   
       }
     } else {
@@ -36,7 +35,7 @@ function checkAge(userName,age){
 }
 
 checkAge("Ripal",35)
-checkAge("Trisha",3)
+checkAge("Krisha",3)
 checkAge("Kripa",38)
 checkAge("Trisha",9)
 
