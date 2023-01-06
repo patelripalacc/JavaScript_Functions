@@ -56,11 +56,11 @@ function box(x, y){
   } else if (x != 0 && y == 0){
     return "y";
   } else{
-    return "original";
+    return "origin";
   }
 } 
 
-console.log(box(-7, 4));
+console.log(box(0, 0));
 console.log(box(3, -4));
 console.log(box(-3, -23));
 console.log(box(6, -11));
